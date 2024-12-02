@@ -1,0 +1,273 @@
+/* Estilo Geral */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+#machine {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+/* Sensores */
+.sensor {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-weight: bold;
+}
+
+#sensor1 {
+  top: 270px;
+  left: 35px;
+}
+#sensor2 {
+  top: 80px;
+  left: 350px;
+}
+#sensor3 {
+  top: 310px;
+  left: 200px;
+}
+#sensor4 {
+  top: 110px;
+  left: 200px;
+}
+#sensor5 {
+  top: 150px;
+  left: 395px;
+}
+
+/* Cilindros */
+.cylinder {
+  position: absolute;
+  width: 60px;
+  height: 150px;
+  background: #777;
+  border: 2px solid #333;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+.vertical1 {
+  width: 100px !important;
+  height: 40px !important;
+  left: 10px !important;
+}
+.vertical3 {
+  width: 60px !important;
+  height: 120px !important;
+}
+
+#cylinder1 {
+  bottom: 150px;
+  left: 100px;
+}
+#cylinder2 {
+  bottom: 210px;
+  left: 270px;
+}
+#cylinder3 {
+  bottom: 1px;
+  left: 270px;
+}
+
+/* mesa */
+.table {
+  position: absolute;
+  width: 150px;
+  left: 120px;
+  height: 22px;
+  top: 250px;
+  background: #ccc;
+}
+.table1 {
+  position: absolute;
+  width: 2px;
+  left: 223px;
+  height: 20px;
+  top: 250px;
+  transform: translate(45px);
+  background: #ccc;
+}
+.table2 {
+  position: absolute;
+  width: 30px;
+  left: 268px;
+  height: 2px;
+  top: 270px;
+  background: #ccc;
+}
+.table4 {
+  position: absolute;
+  width: 2px;
+  left: 291px;
+  height: 20px;
+  top: 250px;
+  transform: translate(45px);
+  background: #ccc;
+}
+.table3 {
+  position: absolute;
+  width: 30px;
+  left: 308px;
+  height: 2px;
+  top: 270px;
+  background: #ccc;
+}
+.table5 {
+  position: absolute;
+  width: 50px;
+  left: 290px;
+  height: 22px;
+  top: 250px;
+  transform: translate(45px);
+  background: #ccc;
+  border-top-right-radius: 20px;
+}
+
+.table6 {
+  position: absolute;
+  width: 10px;
+  left: 375px;
+  height: 60px;
+  top: 270px;
+  background: #ccc;
+}
+.table7 {
+  position: absolute;
+  width: 80px;
+  height: 10px;
+  left: 375px;
+  top: 320px;
+  background: #ccc;
+}
+.table8 {
+  position: absolute;
+  width: 10px;
+  left: 455px;
+  height: 100px;
+  top: 230px;
+  background: #ccc;
+}
+
+.table9 {
+  position: absolute;
+  width: 2px;
+  left: 345px;
+  border-left: 4px dotted #ccc;
+  transform: translate(45px) rotate(31deg);
+  height: 80px;
+  top: 190px;
+}
+/* Peça */
+#text-dis {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  left: 80px;
+  top: 30px;
+}
+#piece {
+  position: absolute;
+  width: 58px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+  top: 230px;
+  left: 120px;
+  transition: all 1s ease-in-out;
+}
+#piece1 {
+  position: absolute;
+  width: 58px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+  top: 160px;
+  left: 120px;
+  transition: all 1s ease-in-out;
+}
+#piece2 {
+  position: absolute;
+  width: 58px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+  top: 135px;
+  left: 120px;
+  transition: all 1s ease-in-out;
+}
+#piece3 {
+  position: absolute;
+  width: 58px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+  top: 110px;
+  left: 120px;
+  transition: all 1s ease-in-out;
+}
+#piece4 {
+  position: absolute;
+  width: 58px;
+  height: 20px;
+  background: red;
+  border-radius: 5px;
+  top: 85px;
+  left: 120px;
+  transition: all 1s ease-in-out;
+}
+
+/* Painel de Controle */
+#controls {
+  position: absolute;
+  bottom: 240px;
+  left: 500px;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+#status {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Sensor padrão (desativado) */
+.sensor {
+  transition: opacity 0.3s ease;
+}
+
+/* Sensor ativo */
+.sensor.active {
+  opacity: 1; 
+  background-color: green; 
+}
