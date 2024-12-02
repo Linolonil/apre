@@ -48,7 +48,6 @@ function movePiece3(newTop, newLeft, delay) {
   });
 }
 
-// Função para ativar sensores
 function activateSensor(sensorId) {
   const sensor = document.getElementById(sensorId);
   if (sensor) {
@@ -56,7 +55,6 @@ function activateSensor(sensorId) {
   }
 }
 
-// Função para desativar sensores
 function deactivateSensor(sensorId) {
   const sensor = document.getElementById(sensorId);
   if (sensor) {
@@ -72,21 +70,30 @@ async function startProcess() {
   updateStatus("Cilindro 1: Inserindo peça...");
   activateSensor("sensor1");
   await movePiece(230, 275, 2000);
-
   // Passo 2: Cilindro 2 prensa
   updateStatus("Cilindro 2: Estampando...");
+  setTimeout(()=>{
+    deactivateSensor("sensor1");
+  },2000)
+  deactivateSensor("sensor1");
+  setTimeout(()=>{
+    activateSensor("sensor2");
+  },2000)
   await movePiece(250, 275, 2000);
-
   // Passo 3: Cilindro 3 extrai
   updateStatus("Cilindro 3: Retirando peça...");
+  deactivateSensor("sensor2");
+  setTimeout(()=>{
+    activateSensor("sensor3");
+  }, 2000)
   await movePiece(230, 275, 2000);
   updateStatus("Cilindro 3: Retirando peça...");
   await movePiece(230, 395, 1000);
-
+  deactivateSensor("sensor3");
   // Passo 4: Sopro e transporte
   updateStatus("Sopro de ar ativado...");
   await movePiece(299, 395, 1000);
-  // outra peça 
+  // outra peça
   // Passo 1: Cilindro 1 recua
   updateStatus("Cilindro 1: Inserindo peça...");
   await movePiece1(230, 120, 1000);

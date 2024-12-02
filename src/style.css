@@ -261,12 +261,10 @@ button:hover {
   font-size: 14px;
 }
 
-/* Sensor padrão (desativado) */
 .sensor {
   transition: opacity 0.3s ease;
 }
 
-/* Sensor ativo */
 .sensor.active {
   opacity: 1; 
   background-color: green; 
